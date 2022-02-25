@@ -5,13 +5,16 @@ import GlobalStyles from './styles/generic/Reset';
 import themes from './styles/themes/styles';
 import Base from './styles/elements/Base';
 import Card from './components/Card/styles';
+import Title from './components/Title/styles';
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={themes}>
       <GlobalStyles />
       <Base>
-        <Card></Card>
+        <Card>
+          <Title>QuizCODE</Title>
+        </Card>
       </Base>
     </ThemeProvider>
   </React.StrictMode>,
