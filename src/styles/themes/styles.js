@@ -5,5 +5,6 @@ export default {
     text: '#333',
     primary: '#35589A',
     secondary: '#000',
+    third: '#519259',
   },
 };

@@ -6,6 +6,7 @@ const Title = styled.h1`
   text-align: center;
   color: ${(props) => props.theme.colors.primary};
   text-shadow: 2px 3px ${(props) => props.theme.colors.secondary};
+  margin-top: 50px;
 `;
 
 export default Title;
