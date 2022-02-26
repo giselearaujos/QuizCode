@@ -19,6 +19,6 @@
         "react"
     ],
     "rules": {
-        "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }]
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],        
     }
 }
