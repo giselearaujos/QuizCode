@@ -5,8 +5,10 @@ import Form from '../../components/Form/index';
 
 const Home = () => {
   return (
-    <Card>
-      <Title>QuizCODE</Title>
+    <Card height="65%">
+      <Title fontSize="30px" marginTop="94px">
+        QuizCODE
+      </Title>
       <Form />
     </Card>
   );
