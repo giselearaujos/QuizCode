@@ -6,9 +6,9 @@ import Input from '../Input/styles';
 const Form = () => {
   return (
     <FormStyled action="/quiz">
-      <Input placeholder="Nome" />
+      <Input placeholder="Name" />
       <Button type="submit" marginBottom="35px">
-        Entrar
+        Start
       </Button>
     </FormStyled>
   );
