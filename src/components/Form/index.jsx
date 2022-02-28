@@ -7,7 +7,9 @@ const Form = () => {
   return (
     <FormStyled action="/quiz">
       <Input placeholder="Nome" />
-      <Button type="submit">Entrar</Button>
+      <Button type="submit" marginBottom="35px">
+        Entrar
+      </Button>
     </FormStyled>
   );
 };

@@ -12,11 +12,13 @@ const Button = styled.button`
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border: 1px solid ${(props) => props.theme.colors.secondary};
   border-radius: 10px;
-  padding: 0px 10px;
+  margin-top: ${(props) => props.marginTop};
+  margin-bottom: ${(props) => props.marginBottom};
+  //margin: 0px 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.third};
+    background-color: ${(props) => props.theme.colors.five};
   }
 `;
 
