@@ -9,7 +9,7 @@ export default () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/quiz" element={<Quiz />} />
+      <Route path="/quiz/:name" element={<Quiz />} />
       <Route path="/result" element={<Result />} />
     </Routes>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
-import Card from '../../components/Card/styles';
-import Title from '../../components/Title/styles';
+import { Card, Title } from '../../components';
 import Form from '../../components/Form/index';
 
 const Home = () => {

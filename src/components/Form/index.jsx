@@ -8,10 +8,7 @@ const Form = () => {
   const [userName, setUserName] = useState('');
   const navigateTo = useNavigate();
 
-  const handleUserRedirect = () => {
-    console.log('foiiii');
-    navigateTo(`/quiz?name=${userName}`);
-  };
+  const handleUserRedirect = () => navigateTo(`/quiz/${userName}`);
 
   return (
     <FormStyled>

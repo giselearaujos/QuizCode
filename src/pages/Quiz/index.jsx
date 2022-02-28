@@ -1,14 +1,16 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Card from '../../components/Card/styles';
-import QuizHeader from '../../components/QuizHeader/styles';
 import QuizQuestion from '../../components/QuizQuestion';
-import Score from '../../components/Score/styles';
-import Title from '../../components/Title/styles';
+import { Card, QuizHeader, Title, Score } from '../../components';
 
 const Quiz = () => {
+  // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
   const { name } = useParams();
-  console.log(name);
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <Card height="80%">
       <QuizHeader>

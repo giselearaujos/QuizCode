@@ -1,7 +1,5 @@
 import React from 'react';
-import Card from '../../components/Card/styles';
-import QuizHeader from '../../components/QuizHeader/styles';
-import Score from '../../components/Score/styles';
+import { Card, QuizHeader, Score } from '../../components';
 
 const Result = () => {
   return (
