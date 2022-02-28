@@ -23,7 +23,7 @@ const Form = () => {
         disabled={!userName}
         onClick={handleUserRedirect}
       >
-        Start {userName}
+        Start
       </Button>
     </FormStyled>
   );
