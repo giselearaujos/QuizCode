@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import FormStyled from './styles';
-import Button from '../Button/styles';
-import Input from '../Input/styles';
+import { Button, Input, FormStyled } from '../../components';
 
 const Form = () => {
   const [userName, setUserName] = useState('');
@@ -20,7 +18,7 @@ const Form = () => {
       <Button
         type="submit"
         marginBottom="35px"
-        disabled={!userName}
+        disabled={!userName.trim()}
         onClick={handleUserRedirect}
       >
         Start
