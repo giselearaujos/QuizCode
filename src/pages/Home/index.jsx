@@ -5,7 +5,7 @@ import Form from '../../components/Form/index';
 const Home = () => {
   return (
     <Card height="65%">
-      <Title fontSize="30px" marginTop="40px">
+      <Title fontSize="35px" marginTop="40px">
         QuizCODE
       </Title>
       <Form />
