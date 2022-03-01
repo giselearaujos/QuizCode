@@ -1,31 +1,77 @@
-import React from 'react';
-import QuizQuestionStyle from './styles';
-import Button from '../Button/styles';
+import React, { useEffect, useState } from 'react';
+import { Text, QuizHeader, QuizQuestionStyle, Loading } from '../../components';
+import api from '../../service/api';
+import Result from '../../pages/Result';
+import { useParams } from 'react-router-dom';
 
 const QuizQuestion = () => {
+  const { name } = useParams();
+  const [questions, setQuestions] = useState(null);
+  const [score, setScore] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  const url =
+    'questions?apiKey=ovQOfdSUzLs6OW46gMXr7bEjdqyoptJ4R3Ji9zBY&category=code&difficulty=Easy&limit=10&tags=HTML';
+
+  useEffect(() => {
+    api
+      .get(url)
+      .then((response) => {
+        setQuestions(response.data);
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.error('ops! ocorreu um erro' + err);
+      });
+  }, []);
+
+  const handleUserAnswer = (answer) => () => {
+    setScore((score) => {
+      if (
+        questions[currentQuestion].correct_answers[answer + '_correct'] ==
+        'true'
+      ) {
+        return score + 1;
+      }
+      return score;
+    });
+    setCurrentQuestion((currentQuestion) => {
+      if (questions.length - 1 > currentQuestion) return currentQuestion + 1;
+      return -1;
+    });
+  };
+
+  if (!questions) {
+    return <Loading>...</Loading>;
+  }
+
+  if (currentQuestion == -1) {
+    return <Result userName={name} score={score} />;
+  }
+
   return (
     <QuizQuestionStyle>
+      <QuizHeader>
+        <Text fontSize="15px" marginTop="25px">
+          QUESTION {currentQuestion + 1}
+        </Text>
+        <Text fontSize="15px" marginTop="25px">
+          SCORE {score}
+        </Text>
+      </QuizHeader>
       <QuizQuestionStyle.Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-        quidem voluptatem quis error facilis animi inventore? Nihil, nobis
-        consectetur hic fuga natus iste voluptatibus voluptatem sunt doloribus
-        quo quod blanditiis!
+        {questions[currentQuestion].question}
       </QuizQuestionStyle.Text>
-      <QuizQuestionStyle.Alternatives>
-        lorem ipsum
-      </QuizQuestionStyle.Alternatives>
-      <QuizQuestionStyle.Alternatives>
-        lorem ipsum
-      </QuizQuestionStyle.Alternatives>
-      <QuizQuestionStyle.Alternatives>
-        lorem ipsum
-      </QuizQuestionStyle.Alternatives>
-      <QuizQuestionStyle.Alternatives>
-        lorem ipsum
-      </QuizQuestionStyle.Alternatives>
-      <Button type="submit" marginBottom="32px" marginTop="15px">
-        Submit
-      </Button>
+      {Object.entries(questions[currentQuestion].answers)
+        .filter(([key, value]) => value)
+        .map(([key, value]) => (
+          <QuizQuestionStyle.Alternatives
+            key={key}
+            onClick={handleUserAnswer(key)}
+          >
+            {value}
+          </QuizQuestionStyle.Alternatives>
+        ))}
     </QuizQuestionStyle>
   );
 };
