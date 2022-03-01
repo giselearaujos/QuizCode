@@ -14,11 +14,10 @@ const Button = styled.button`
   border-radius: 10px;
   margin-top: ${(props) => props.marginTop};
   margin-bottom: ${(props) => props.marginBottom};
-  //margin: 0px 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.five};
+    background-image: ${(props) => props.theme.colors.five};
   }
 `;
 

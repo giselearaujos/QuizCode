@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Base = styled.body`
+const Base = styled.div`
   display: flex;
   align-items: center;
   background-color: ${(props) => props.theme.colors.backgroundColor};

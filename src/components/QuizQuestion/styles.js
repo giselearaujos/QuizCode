@@ -9,7 +9,8 @@ const QuizQuestionStyle = styled.div`
 QuizQuestionStyle.Text = styled.h2`
   font-size: 12px;
   line-height: 17px;
-  border: 1px solid gray;
+  color: ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
   border-radius: 5px;
   margin: 30px;
   padding: 8px;
@@ -18,7 +19,8 @@ QuizQuestionStyle.Text = styled.h2`
 
 QuizQuestionStyle.Alternatives = styled.p`
   font-size: 12px;
-  border: 1px solid gray;
+  color: ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
   border-radius: 5px;
   margin: 10px 30px;
   padding: 8px;
