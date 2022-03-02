@@ -28,6 +28,8 @@ Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
 - 🔨 [ViteJs](https://vitejs.dev/)
 - 🔨 [ReactJs](https://pt-br.reactjs.org/)
+- 🔨 [ESLint](https://eslint.org/)
+- 🔨 [Prettier](https://prettier.io)
 - 🔨 [Styled-components](https://styled-components.com/)
 - 🔨 [React Router Dom](https://reactrouter.com/)
 - 🔨 [QuizAPI](https://quizapi.io/)
