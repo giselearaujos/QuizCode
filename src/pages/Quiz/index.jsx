@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import QuizQuestion from '../../components/QuizQuestion';
-import { Card, QuizHeader, Title } from '../../components';
+import { Card, QuizHeader, Text } from '../../components';
 
 const Quiz = () => {
   const { name } = useParams();
@@ -9,12 +9,12 @@ const Quiz = () => {
   return (
     <Card height="80%">
       <QuizHeader>
-        <Title fontSize="20px" marginTop="25px">
+        <Text fontSize="20px" marginTop="25px">
           QuizCode
-        </Title>
-        <Title fontSize="20px" marginTop="25px">
+        </Text>
+        <Text fontSize="20px" marginTop="25px">
           {name}
-        </Title>
+        </Text>
       </QuizHeader>
       <QuizQuestion />
     </Card>
