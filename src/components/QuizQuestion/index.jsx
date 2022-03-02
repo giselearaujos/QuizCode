@@ -18,7 +18,6 @@ const QuizQuestion = () => {
       .get(url)
       .then((response) => {
         setQuestions(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         console.error('ops! ocorreu um erro' + err);
