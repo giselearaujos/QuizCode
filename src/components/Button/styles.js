@@ -19,6 +19,31 @@ const Button = styled.button`
   &:hover {
     background-image: ${(props) => props.theme.colors.five};
   }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    font-size: 25px;
+    width: 73%;
+  }
+
+  @media (min-width: 581px) and (max-width: 768px) {
+    font-size: 24px;
+    width: 66%;
+  }
+
+  @media (min-width: 481px) and (max-width: 580px) {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 18px;
+    width: 91%;
+  }
+
+  @media (min-width: 200px) and (max-width: 321px) {
+    font-size: 17px;
+    width: 97%;
+  }
 `;
 
 export default Button;
