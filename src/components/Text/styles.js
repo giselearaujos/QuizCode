@@ -26,12 +26,12 @@ const Text = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 15px;
+    font-size: 12px;
     width: 100%;
   }
 
   @media (min-width: 200px) and (max-width: 321px) {
-    font-size: 12px;
+    font-size: 9px;
     width: 100%;
   }
 `;

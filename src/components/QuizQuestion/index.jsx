@@ -52,7 +52,7 @@ const QuizQuestion = () => {
     <QuizQuestionStyle>
       <QuizHeader>
         <Text fontSize="15px" marginTop="25px">
-          Question {currentQuestion + 1}
+          Question {currentQuestion + 1}/10
         </Text>
         <Text fontSize="15px" marginTop="25px">
           SCORE {score}
